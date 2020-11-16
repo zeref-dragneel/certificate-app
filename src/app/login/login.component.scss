@@ -1,0 +1,30 @@
+.full-page{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+.left, .right{
+  width:50%
+}
+.left{
+  background-image: url("https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80");
+}
+.right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-container{
+  width:70%;
+}
+.btn-override{
+  padding-left: 0 !important;
+}
+@media only screen and (max-width: 425px) {
+  .left{
+    display: none;
+  }
+  .right{
+    width: 100%;
+  }
+}
