@@ -1,1 +1,84 @@
-<p>home works!</p>
+<nav class="navbar navbar-dark bg-dark sticky-top ">
+  <a class="navbar-brand">Navbar</a>
+    <button class="btn btn-primary my-2 my-sm-0" >Logout</button>
+</nav>
+<div class="container container-fluid my-5 download-wizard" >
+  <div class="card">
+    <div class="card-body p-5">
+  <h3 class="text-center mb-3" >Certificate Download Wizard</h3>
+  <form action="" [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="fontType">Font Type*</label>
+    <ng-select [items]="fontTypeArray" id="fontType"
+               bindLabel="name"
+               placeholder="Select item" formControlName="fontType" [ngClass]="{ 'blurred': submitted && f.fontType.errors }">
+    </ng-select>
+    <div *ngIf="submitted && f.fontType.errors" class="ng-select-invalid-feedback">
+      <div *ngIf="f.fontType.errors.required">This field is required</div>
+    </div>
+  </div>
+    <div class="form-group">
+      <label for="fontSize">Font Size*</label>
+      <ng-select [items]="fontSizeArray" id="fontSize"
+                 bindLabel="value" addTag="true"
+                 placeholder="Select item" formControlName="fontSize" [ngClass]="{ 'blurred': submitted && f.fontSize.errors }">
+      </ng-select>
+      <div *ngIf="submitted && f.fontSize.errors" class="ng-select-invalid-feedback">
+        <div *ngIf="f.fontSize.errors.required">This field is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email*</label>
+      <ng-select [items]="emailArray" id="email"
+                 bindLabel="name"
+                 placeholder="Select item" formControlName="email" [ngClass]="{ 'blurred': submitted && f.email.errors }">
+      </ng-select>
+      <div *ngIf="submitted && f.email.errors" class="ng-select-invalid-feedback">
+        <div *ngIf="f.email.errors.required">This field is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="rowPosition">Row Position for Name*</label>
+      <ng-select [items]="rowPositionArray" id="rowPosition"
+                 bindLabel="value" addTag="true"
+                 placeholder="Select item" formControlName="rowPosition" [ngClass]="{ 'blurred': submitted && f.rowPosition.errors }">
+      </ng-select>
+      <div *ngIf="submitted && f.rowPosition.errors" class="ng-select-invalid-feedback">
+        <div *ngIf="f.rowPosition.errors.required">This field is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="columnPosition">Column Position for Name*</label>
+      <ng-select [items]="columnPositionArray" id="columnPosition"
+                 bindLabel="value" addTag="true"
+                 placeholder="Select item" formControlName="columnPosition" [ngClass]="{ 'blurred': submitted && f.columnPosition.errors }">
+      </ng-select>
+      <div *ngIf="submitted && f.columnPosition.errors" class="ng-select-invalid-feedback">
+        <div *ngIf="f.columnPosition.errors.required">This field is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="institutionRowPosition">Row position for Institution Name*</label>
+      <ng-select [items]="institutionRowPositionArray" id="institutionRowPosition"
+                 bindLabel="value" addTag="true"
+                 placeholder="Select item" formControlName="institutionRowPosition" [ngClass]="{ 'blurred': submitted && f.institutionRowPosition.errors }">
+      </ng-select>
+      <div *ngIf="submitted && f.institutionRowPosition.errors" class="ng-select-invalid-feedback">
+        <div *ngIf="f.institutionRowPosition.errors.required">This field is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="institutionColumnPosition">Column position for Institution Name*</label>
+      <ng-select [items]="institutionColumnPositionArray" id="institutionColumnPosition"
+                 bindLabel="value" addTag="true"
+                 placeholder="Select item" formControlName="institutionColumnPosition" [ngClass]="{ 'blurred': submitted && f.institutionColumnPosition.errors }">
+      </ng-select>
+      <div *ngIf="submitted && f.institutionColumnPosition.errors" class="ng-select-invalid-feedback">
+        <div *ngIf="f.institutionColumnPosition.errors.required">This field is required</div>
+      </div>
+    </div>
+    <button class="btn btn-success">Download</button>
+  </form>
+  </div>
+  </div>
+</div>
