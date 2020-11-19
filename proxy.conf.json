@@ -1,0 +1,11 @@
+{
+  "/app/*": {
+    "target": {
+      "host": "sharathcookie.herokuapp.com",
+      "protocol": "https:",
+      "port": 443
+    },
+    "secure": true,
+    "changeOrigin": true
+  }
+}

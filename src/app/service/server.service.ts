@@ -10,4 +10,8 @@ export class ServerService {
   login(payload): Observable<any> {
     return this.http.post('https://jsonplaceholder.typicode.com/posts', payload);
   }
+
+  test() {
+    return this.http.get('/app/test');
+  }
 }

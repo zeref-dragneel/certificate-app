@@ -22,3 +22,8 @@
 //ng-select.ng-select-container{
 //  color: #595d6e
 //}
+@media only screen and (max-width: 425px) {
+  .download-wizard {
+    width:90%;
+  }
+}

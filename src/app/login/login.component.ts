@@ -54,4 +54,13 @@ export class LoginComponent implements OnInit {
       });
     }
   }
+
+  // tslint:disable-next-line:typedef
+  test() {
+    this.server.test().subscribe(data => {
+      console.log(data);
+    }, (err) => {
+      console.log(err);
+    });
+  }
 }
